@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>囲碁の間レビュー</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/igo.css">
+</head>
+<body>
+    <main class="lower-main">
+    <div class="lower-heading-group">
+      <h2>レビュー</h2>
+    </div>
+    <form class="form-box" action="https://api.staticforms.xyz/submit" method="post">
+      <input type="hidden" name="accessKey" value="sf_cbc4c4ba06k54n9bfh4ha579"><!--ここが入力内容の送信先-->
+      <!-- valueを "thanks.html" に変更する -->
+      <input type="hidden" name="redirectTo" value="https://lutaruta.github.io/igo-no-site/thanks.html"> 
+      <div class="form-item">
+        <label>評価（不満 1☆☆☆☆☆5 満足）</label>
+        <div class="rating-stars" id="rating-stars">
+          <!-- 5つの星を逆順で配置するのがポイント -->
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+      </div>
+      <div class="form-item">
+        <label>ご意見・ご感想をお聞かせください（任意）</label>
+        <textarea rows="7" name="message" placeholder="コメント内容"></textarea>
+      </div>
+      <div class="form-item">
+        <button type="submit">送信する</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

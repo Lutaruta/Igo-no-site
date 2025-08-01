@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>囲碁の間</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/igo.css">
+  <script src="js/igo.js" defer></script>
+</head>
+<body>
+  <header id="header">
+    <h1>
+      <a href="index.html" class="logo">
+        <img src="img/ロゴ.PNG" alt="囲碁の間のロゴ">
+      </a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="#how">囲碁とは</a></li>
+        <li><a href="#stg">戦法</a></li>
+        <li><a href="#move">定石</a></li>
+        <li><a href="#contact">レビュー</a></li>
+      </ul>
+    </nav>
+  </header> 
+
+<section class="hero" id="hero-section">
+
+  <h2>＿人人人人人人＿<br>
+      ＞　突然の碁　＜<br>
+      ￣Y^Y^Y^Y^Y￣
+  </h2>
+  <p>ルールから実戦についてのコメント、解説をひとつまみ</p>
+  <button type="button" class="toggle-button" aria-controls="hero-section" aria-expanded="true">
+    <img src="img/up.png" alt="セクションを閉じる" class="icon-down">
+    <img src="img/down.png" alt="セクションを開く" class="icon-up">
+  </button>
+
+</section>
+
+  <main>
+    <section class="main-section how" id="how">
+      <div class="container">
+        <div class="heading-group">
+          <h2>囲碁とは何か</h2>
+        </div>
+        <div class="layout">
+          <div class="image">
+            <img src="img/igo.png" alt="碁盤のいらすと">
+          </div>
+          <div class="text">
+            <h3>囲碁について</h3>
+            <p>　囲碁は、二人のプレイヤーが交互に盤上に石を置いていき、最終的に自分の石で囲んだ領域の広さを競うゲームです。</p>
+            <p><span>ちょっとした豆知識（余白の有効活用）</span><br>　最近はメジャーになってきた気がしなくもないですが、QRコードのあの模様、実は囲碁の盤面からインスピレーションを受けて作られたものなんです。
+              なんだか身近なものとの関係があるとほっこりしますね。
+            </p>
+          </div>
+        </div>
+        <div class="text">
+          <h3>対局開始から終局までの大まかな流れ</h3>
+          <ul>
+            <li>1. 握り※で先手（黒石）・後手（白石）を決めます。</li>
+            <li>2. 交互に一手ずつ、線の交点（目）に石を置いていきます。</li>
+            <li>3. 相手の石を囲んで取ることができます（とった石はアゲハマという）。</li>
+            <li>4. 盤上に打つ場所がなくなったらパスをします。</li>
+            <li>5. 両者がパスをしたら終局です。</li>
+            <li>6. 自分の地（囲んだ領域）とアゲハマの数を数えます。</li>
+            <li>7. 合計が多い方が勝ちとなります。</li>
+            <li>補足. このゲームは先手の方が圧倒的に有利であるため、引き分け防止もかねて後手に6目半が与えられています。</li>
+          </ul><br>
+          <p>※握り（にぎり）</p>
+          <ul>
+          <li>黒石側は石を1つか2つ相手に見えないように取り、白石側は適当な数を相手に見えないように取る。</li>
+          <li>黒側は白側が持っている石が奇数個なのか偶数個なのかを予想します（持っている黒石が1個ならば奇数個、2個ならば偶数個を予想していることになります）。</li>
+          <li>黒側の予想が当たっていれば黒石側が先手、外れていれば白石側と石を交換して後手にまわり対局開始となります。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main-section stg" id="stg">
+      <div class="container">
+        <div class="heading-group">
+          <h2>戦法</h2>
+        </div>
+        <div class="text">
+          <h3>序盤の戦法</h3>
+          <p>序盤は隅や辺から石を配置し、広い領域を確保することを目指します。これを「布石」と呼びます。</p>
+          <h3>中盤の戦法</h3>
+          <p>中盤は、お互いの石が接触し、最も複雑な戦いが起こる場面です。読みの力が試されます。</p>
+          <h3>終盤の戦法</h3>
+          <p>終盤は、地の境界線を確定させる「ヨセ」が中心になります。一目でも多く地を確保する精密な計算が求められます。</p>
+        </div>
+      </div>
+    </section>
+
+
+     <div class="two-column-layout container">
+        <!-- 左のコンテナ -->
+    <div class="column-left">
+      <!-- ここに「定石」セクションを丸ごと移動 -->
+      <section class="main-section move" id="move">
+        <div class="heading-group">
+          <h2>定石</h2>
+          <p>序盤の戦法にて「広い領域を確保することを目指す」とありましたが、どうやったら領域を広げられるのかわからない！となる人が大半だと思います。</p>
+          <p>こんな時に役立つのが「定石」です。ここでは定石の中でも代表的なものをピックアップしてきましたので、参考にして対局を有利に進めましょう！</p>
+        </div>
+        <div class="button-container">
+          <button type="button" class="toggle-button" id="joseki-toggle-button">
+            定石たち（クリックで表示）
+          </button>
+        </div>
+        <div id="joseki-list-container" class="list-container is-hidden">
+          <ul class="move-list" id="top-joseki-list">
+          </ul>
+        </div>
+      </section>
+    </div>
+      <!-- 右のコンテナ -->
+    <div class="column-right">
+      <!-- ここに「レビュー」セクションを丸ごと移動 -->
+      <section class="main-section contact" id="contact">
+        <div class="heading-group">
+          <h2>レビュー</h2>
+        </div>
+        <p>当サイトの改善のため、皆様のご意見をお聞かせください。</p>
+        <div class="form-button-container">
+          <a href="contact.html" class="button">レビューフォームへ</a>
+        </div>
+      </section>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    <a href="index.html" class="logo">
+      <img src="img/ロゴ.PNG" alt="囲碁の間のロゴ">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#how">囲碁とは</a></li>
+        <li><a href="#stg">戦法</a></li>
+        <li><a href="#move">定石</a></li>
+        <li><a href="#contact">レビュー</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">© 2025 囲碁の間</p>
+  </footer>
+</body>
+</html>

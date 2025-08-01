@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+body {
+  color: #222;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  background-color: antiquewhite;
+}
+p {
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+span{
+  font-weight: bold;
+}
+header{
+  padding:10px 40px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c1c121;
+  .logo img{
+    display: block;
+    height: 100px;
+  }
+  nav ul{
+    display:flex;
+    align-items: center;
+    gap: 50px;
+  }
+  nav a{
+    font-size: 14px;
+    font-weight: 400;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.hero {
+  color: #fff;
+  text-align: center;
+  height: 640px;
+  background-image: url(../img/碁盤.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  > .toggle-button {
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #c1c121;
+    border-radius: 50%;
+    box-shadow: 0px 12px 20px rgb(0 0 0 / 0.1);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    translate: -50% 50%;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    .icon-up {
+      display: none;
+    }
+  }
+
+  /* ↓↓↓ 畳まれた時のスタイルを追加 ↓↓↓ */
+  &.is-collapsed {
+    height: 50px; /* 畳まれた時の高さ */
+
+    /* テキストは見えなくする */
+    h2, p {
+      opacity: 0;
+    }
+
+    /* アイコンを切り替える */
+    .toggle-button {
+      .icon-down {
+        display: none;
+      }
+      .icon-up {
+        display: block;
+      }
+    }
+  }
+}
+.container{
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-inline: 40px;
+}
+.main-section{
+  padding: 80px 0 100px;
+}
+.heading-group{
+  text-align: center;
+  margin: 0 0 60px;
+
+  h2{
+    color: #e49318;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  &::after{
+    content:"";
+    display: block;
+    width:40px;
+    height: 4px;
+    background-color: #c1c121;
+    border-radius: 4px;
+    margin:30px auto 0;
+  }
+}
+.how .layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 60px;
+}
+.how .image{
+  border-radius: 40px;
+  overflow:hidden;
+}
+.how .image img{
+  width: 100%;
+  aspect-ratio: 5/4;
+  object-fit: cover;
+}
+.how .text h3,.stg .text h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.how .text p,.stg .text p,.how .text ul {
+  margin-top: 20px;
+}
+.how .text li {
+  list-style-position: inside;
+  margin-left: 1em;
+}
+.move{
+  background-color: #F3F1EE;
+}
+.move-card-link {
+  display: block;
+  transition:box-shadow 0.2s;
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+.move-card{
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: grid;
+  gap: 5px;
+  img{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .name{
+   font-size:14px;
+  }
+}
+.move-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.stg{
+  background-color: aliceblue;
+}
+.stg .text{
+  text-align: center;
+}
+.contact{
+  text-align: center;
+  background-color: #F3F1EE;
+}
+.form-button-container {
+  margin-top: 40px;
+}
+.button{
+  display: inline-block;
+  color: #fff;
+  background-color: #c1c121;
+  padding: 1em 2em;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  &:hover{
+    background-color: #93931a;
+  }
+}
+/* 2カラムレイアウト用のスタイル */
+.two-column-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.column-left,
+.column-right {
+  flex: 1;
+  background-color: #F3F1EE;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.two-column-layout .main-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.two-column-layout .move-list {
+  grid-template-columns: repeat(2, 1fr);
+}
+footer{
+  color:#fff;
+  background-color: #c1c121;
+  padding: 40px 20px 20px;
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+
+  .logo img{
+    display: block;
+    height: 100px;
+  }
+  ul{
+    display: flex;
+    gap: 40px;
+  }
+  a{
+    font-size: 13px;
+  }
+  .copyright{
+    font-size: 12px;
+  }
+}
+/* 下層ページ用スタイル */
+.lower-main{
+  padding: 80px 0 100px;
+  background-color: #F3F1EE;
+}
+.lower-heading-group{
+  text-align: center;
+  margin: 0 0 40px;
+  h2{
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+.form-box{
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding:60px;
+  background-color: #fff;
+  box-shadow: 0px 24px 40px rgb(0 0 0 / 0.08);
+}
+.form-item{
+  display: grid;
+  gap: 10px;
+  label{
+    font-size: 14px;
+  }
+  + .form-item{
+    margin-top: 30px;
+  }
+  input, textarea{
+    border: 1px solid #aaa;
+    padding: 0.8em 0.5em;
+    border-radius: 8px;
+    &::placeholder{
+      color: #aaa;
+    }
+  }
+  textarea{
+    resize: vertical;
+  }
+  button{
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    background-color: #c1c121;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover{
+      background-color: #93931a;
+    }
+  }
+}
+.list-container {
+  margin-top: 20px;
+}
+.list-container.is-hidden {
+  display: none;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.toggle-button {
+  background-color: #c1c121;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: #93931a;
+  }
+}
+.jouseki-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.rating-stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  font-size: 2em;
+}
+.rating-stars input[type="radio"] {
+  display: none;
+}
+.rating-stars label {
+  color: #ccc;
+  transition: color 0.2s;
+}
+.rating-stars input[type="radio"]:checked ~ label {
+  color: #ffc107;
+}
+.thanks-layout{
+  display: grid;
+  justify-items: center;
+  h{
+  color: #222;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+a{
+  display: grid;
+  height: 50px;
+  width: 160px;
+  place-items: center;
+}
+}
