@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const toggleButton = document.getElementById('joseki-toggle-button');
-  const listContainer = document.getElementById('joseki-list-container');
+  const toggleButton = document.querySelector('#joseki-toggle-button');
+  const listContainer = document.querySelector('#joseki-list-container');
 
   //ボタンがnullでないことを確認してからイベントリスナーを設定
   if (toggleButton && listContainer) {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
-  const heroSection = document.getElementById('hero-section');
+  const heroSection = document.querySelector('#hero-section');
   const toggleButton = document.querySelector('.toggle-button');
 
   // クリックしたときに動かす
@@ -36,7 +36,7 @@ const josekiData = [
     link: 'keima.html'
   },
 ];
-const josekiListContainer = document.getElementById('top-joseki-list');
+const josekiListContainer = document.querySelector('#top-joseki-list');
 josekiData.forEach(joseki => {
   const listItem = `
     <li>
@@ -49,4 +49,5 @@ josekiData.forEach(joseki => {
     </li>
   `;
   josekiListContainer.insertAdjacentHTML('beforeend', listItem);
+
 });
